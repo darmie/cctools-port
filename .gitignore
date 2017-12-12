@@ -1,2 +1,6 @@
 *.o
 *.lo
+iPhoneOS6.0.sdk
+target
+lib
+tmp

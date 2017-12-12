@@ -174,7 +174,7 @@ echo ""
 pushd tmp &>/dev/null
 git_clone_repository https://github.com/tpoechtrager/apple-libtapi.git master
 pushd apple-libtapi &>/dev/null
-INSTALLPREFIX=$TARGETDIR ./build.sh
+INSTALLPREFIX=$TARGETDIR CXX=g++ CC=gcc ./build.sh
 ./install.sh
 popd &>/dev/null
 popd &>/dev/null
@@ -191,7 +191,7 @@ popd &>/dev/null
 pushd tmp &>/dev/null
 mkdir -p cctools
 pushd cctools &>/dev/null
-../../../../cctools/configure --target=$TRIPLE --prefix=$TARGETDIR --with-libtapi=$TARGETDIR
+CC=clang ../../../../cctools/configure --target=$TRIPLE --prefix=$TARGETDIR --with-libtapi=$TARGETDIR
 make -j$JOBS && make install
 popd &>/dev/null
 popd &>/dev/null
