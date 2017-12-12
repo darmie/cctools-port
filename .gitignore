@@ -1,6 +1,9 @@
 *.o
 *.lo
-iPhoneOS6.0.sdk
-target
-lib
-tmp
+*.in
+usage_examples/ios_toolchain/iPhoneOS6.0.sdk
+usage_examples/ios_toolchain/target
+usage_examples/ios_toolchain/tmp
+usage_examples/ios_toolchain/cctools
+usage_examples/ios_toolchain/xar
+usage_examples/ios_toolchain/nbuild.sh
